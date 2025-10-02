@@ -1,9 +1,11 @@
-export const Scores = ({ type, score }) => {
+import "./scores.css";
+
+export const Scores = ({ styling, type, score }) => {
   // split the scores for styling purposes
   const split_scores = score.split(" / ");
   return (
     <>
-      <div className="scores">
+      <div className={styling}>
         <div className="score__type">
           <span className="icon">icon</span>
           <span className="type">{type}</span>

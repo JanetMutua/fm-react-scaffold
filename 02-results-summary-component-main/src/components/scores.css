@@ -1,0 +1,72 @@
+:root {
+  /* primary colors */
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+}
+
+.scores {
+  display: flex;
+  padding: 0.8rem 0.5rem;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  background-color: palegoldenrod;
+  margin-top: 0.5em;
+}
+
+.reaction {
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.reaction .score__type {
+  color: var(--light-red);
+}
+
+.reaction .score__type .type,
+.reaction .bolded {
+  font-weight: 700;
+}
+
+.memory {
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.memory .score__type {
+  color: var(--orangey-yellow);
+}
+
+.memory .score__type .type,
+.memory .bolded {
+  font-weight: 700;
+}
+
+.verbal {
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+.verbal .score__type {
+  color: var(--green-teal);
+}
+
+.verbal .score__type .type,
+.verbal .bolded {
+  font-weight: 700;
+}
+
+.visual {
+  color: var(--cobalt-blue);
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.visual .score__type {
+  color: var(--cobalt-blue);
+}
+
+.visual .score__type .type,
+.visual .bolded {
+  font-weight: 700;
+}
+
+.actual__score {
+  display: flex;
+}

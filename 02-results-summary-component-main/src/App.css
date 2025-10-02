@@ -12,12 +12,6 @@
 
 /* CUSTOM VARIABLES */
 :root {
-  /* primary colors */
-  --light-red: hsl(0, 100%, 67%);
-  --orangey-yellow: hsl(39, 100%, 56%);
-  --green-teal: hsl(166, 100%, 37%);
-  --cobalt-blue: hsl(234, 85%, 45%);
-
   /* gradients */
   --light-slate-blue: hsl(252, 100%, 67%);
   --light-royal-blue: hsl(241, 81%, 54%);
@@ -51,21 +45,69 @@ body {
   background-color: var(--white);
   margin: 2rem auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
 }
 
+/* styling the right side of the card */
+
 .card__right {
-  /* width: 50%; */
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 1.5rem;
   color: var(--white);
   background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
-  border-radius: 1rem;
+  border-radius: 1.5rem;
+}
+
+.title__right {
+  font-size: 0.9em;
+  color: var(--light-lavender);
+}
+
+.score {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 1em 0;
+  background: linear-gradient(var(--violet-blue), var(--persian-blue));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.big__score {
+  font-size: 2.8em;
+  font-weight: 800;
+}
+
+.small__score {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: var(--light-lavender);
+}
+
+.summary {
+  font-size: 0.8em;
+  font-weight: 400;
+  margin: 1rem;
+  color: var(--light-lavender);
+  text-align: center;
+}
+
+/* styling the left side of the card */
+
+.card__left {
+  width: 50%;
+  padding: 0 1.5rem;
+}
+
+.title__left {
+  margin-bottom: 2rem;
 }
 
 /* footer section */

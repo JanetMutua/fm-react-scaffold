@@ -22,11 +22,16 @@ function App() {
 
           {/* left side of the card */}
           <section className="card__left">
-            <h2 className="title__right">Summary</h2>
-            <Scores type="Reaction" score="80 / 100" />
-            <Scores type="Memory" score="92 / 100" />
-            <Scores type="Verbal" score="61 / 100" />
-            <Scores type="Visual" score="72 / 100" />
+            <h2 className="title__left">Summary</h2>
+            <Scores
+              styling="scores reaction"
+              type="Reaction"
+              score="80 / 100"
+            />
+            <Scores styling="scores memory" type="Memory" score="92 / 100" />
+            <Scores styling="scores verbal" type="Verbal" score="61 / 100" />
+            <Scores styling="scores visual" type="Visual" score="72 / 100" />
+            <button>Continue</button>
           </section>
         </div>
       </main>
