@@ -8,15 +8,19 @@
 
 .scores {
   display: flex;
-  padding: 0.8rem 0.5rem;
+  padding: 0.7rem 0.5rem;
   justify-content: space-between;
   border-radius: 0.5rem;
   background-color: palegoldenrod;
-  margin-top: 0.5em;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
 }
 
+/* styling individual components */
+
+/* for reaction */
 .reaction {
-  background-color: hsla(0, 100%, 67%, 0.1);
+  background-color: hsla(0, 100%, 67%, 0.05);
 }
 
 .reaction .score__type {
@@ -28,8 +32,10 @@
   font-weight: 700;
 }
 
+/* for memory */
+
 .memory {
-  background-color: hsla(39, 100%, 56%, 0.1);
+  background-color: hsla(39, 100%, 56%, 0.05);
 }
 
 .memory .score__type {
@@ -41,8 +47,10 @@
   font-weight: 700;
 }
 
+/* for verbal */
+
 .verbal {
-  background-color: hsla(166, 100%, 37%, 0.1);
+  background-color: hsla(166, 100%, 37%, 0.05);
 }
 .verbal .score__type {
   color: var(--green-teal);
@@ -53,9 +61,10 @@
   font-weight: 700;
 }
 
+/* for visual */
+
 .visual {
-  color: var(--cobalt-blue);
-  background-color: hsla(234, 85%, 45%, 0.1);
+  background-color: hsla(234, 85%, 45%, 0.05);
 }
 
 .visual .score__type {
@@ -67,6 +76,32 @@
   font-weight: 700;
 }
 
+/* styling the two divs */
+
+.score__type {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.score__type .icon {
+  width: 16px;
+  height: auto;
+}
+
 .actual__score {
   display: flex;
+  gap: 0.5rem;
+}
+
+.actual__score .percent {
+  font-weight: 700;
+  color: hsla(224, 30%, 27%, 0.5);
+}
+
+/* mobile dimensions */
+@media (max-width: 480px) {
+  .scores {
+    padding: 1.2rem 0.5rem;
+    margin-top: 1.2rem;
+  }
 }

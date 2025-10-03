@@ -1,5 +1,6 @@
 import "./App.css";
-import { Scores } from "./components/scores";
+import jsonData from "./data.json";
+import { Scores } from "./components/scores/scores";
 
 function App() {
   return (
@@ -23,27 +24,26 @@ function App() {
           {/* left side of the card */}
           <section className="card__left">
             <h2 className="title__left">Summary</h2>
-            <Scores
-              styling="scores reaction"
-              type="Reaction"
-              score="80 / 100"
-            />
-            <Scores styling="scores memory" type="Memory" score="92 / 100" />
-            <Scores styling="scores verbal" type="Verbal" score="61 / 100" />
-            <Scores styling="scores visual" type="Visual" score="72 / 100" />
-            <button>Continue</button>
+
+            {jsonData.map((data, index) => {
+              let styling = `scores ${data.category.toLowerCase()}`;
+              return (
+                <Scores
+                  key={`${index}-${data.category}`}
+                  styling={styling}
+                  imgSrc={data.icon}
+                  type={data.category}
+                  score={data.score}
+                />
+              );
+            })}
+
+            <button type="button" className="card__button">
+              Continue
+            </button>
           </section>
         </div>
       </main>
-      <footer>
-        <div class="attribution">
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-            Frontend Mentor
-          </a>
-          . Coded by <a href="#">Janet Mutua</a>.
-        </div>
-      </footer>
     </>
   );
 }
