@@ -26,7 +26,9 @@ function App() {
             <h2 className="title__left">Summary</h2>
 
             {jsonData.map((data, index) => {
+              // defining the css class names dynamically for each score component
               let styling = `scores ${data.category.toLowerCase()}`;
+
               return (
                 <Scores
                   key={`${index}-${data.category}`}
