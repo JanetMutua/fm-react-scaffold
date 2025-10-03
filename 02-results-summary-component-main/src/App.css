@@ -43,7 +43,7 @@ body {
 /* CARD STYLING */
 
 .card {
-  max-width: 500px;
+  max-width: 580px;
   height: fit-content;
   background-color: var(--white);
   display: flex;
@@ -185,6 +185,13 @@ body {
 
   .summary {
     padding: 0 2.2rem;
+  }
+}
+
+/* tablet */
+@media (max-width: 580px) {
+  .card {
+    max-width: 520px;
   }
 }
 

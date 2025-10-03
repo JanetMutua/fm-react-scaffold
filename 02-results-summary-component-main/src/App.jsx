@@ -3,8 +3,6 @@ import jsonData from "./data.json";
 import { Scores } from "./components/scores/scores";
 
 function App() {
-  
-
   return (
     <>
       <main className="component">
