@@ -1,3 +1,5 @@
 // Entry point for component specific styles -- holds the styles specific to the App component
 
 @forward "./main";
+@forward "./components/button";
+@forward "./components/card.scss";

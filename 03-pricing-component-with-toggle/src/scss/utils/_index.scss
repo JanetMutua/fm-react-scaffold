@@ -1,4 +1,5 @@
 // This file forwards mixins and variables -- making them available throughout this project
+// The @forward here, merges both of these stylesheets to be reused in other stylesheets by calling @use index
 
 @forward "./mixins";
 @forward "./variables";
