@@ -24,27 +24,33 @@ function App() {
 
   // toggle functionality
   const handleToggle = () => {
-    console.log(isToggled);
     setIsToggled(!isToggled);
   };
 
   return (
     <>
-      <main>
-        <div className="pricing">
-          <h1 className="pricing__title">Our Pricing</h1>
-          <div className="pricing__toggle">
-            <span className="pricing__toggle__text">Annually</span>
-            <div className="pricing__toggle__icon" onClick={handleToggle}>
-              {isToggled ? (
-                <FontAwesomeIcon icon="fa-solid fa-toggle-off" />
-              ) : (
-                <FontAwesomeIcon icon="fa-solid fa-toggle-on" />
-              )}
-            </div>
-            <span className="pricing__toggle__text">Monthly</span>
-          </div>
+      <main className="pricing">
+        <h1 className="pricing__title">Our Pricing</h1>
 
+        <section className="pricing__toggle">
+          <span className="pricing__toggle__text">Annually</span>
+          <div className="pricing__toggle__icon" onClick={handleToggle}>
+            {isToggled ? (
+              <FontAwesomeIcon
+                className="toggle"
+                icon="fa-solid fa-toggle-off"
+              />
+            ) : (
+              <FontAwesomeIcon
+                className="toggle"
+                icon="fa-solid fa-toggle-on"
+              />
+            )}
+          </div>
+          <span className="pricing__toggle__text">Monthly</span>
+        </section>
+
+        <section className="pricing__cards">
           {isToggled
             ? pricingData.annually &&
               pricingData.annually.map((annualData, index) => {
@@ -54,6 +60,11 @@ function App() {
                     cardName={annualData.title}
                     cardPrice={annualData.price}
                     cardFeatures={annualData.features}
+                    cardStyling={
+                      annualData.title.toLowerCase() === "professional"
+                        ? "blue"
+                        : ""
+                    }
                   />
                 );
               })
@@ -65,10 +76,15 @@ function App() {
                     cardName={monthlyData.title}
                     cardPrice={monthlyData.price}
                     cardFeatures={monthlyData.features}
+                    cardStyling={
+                      monthlyData.title.toLowerCase() === "professional"
+                        ? "blue"
+                        : ""
+                    }
                   />
                 );
               })}
-        </div>
+        </section>
       </main>
     </>
   );

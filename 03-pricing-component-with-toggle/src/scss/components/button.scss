@@ -1,0 +1,33 @@
+@use "../utils/variables" as *;
+
+.button {
+  margin-top: 1.5rem;
+  width: 100%;
+  border-radius: 0.2rem;
+  line-height: 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: linear-gradient($linear-gradient);
+  color: $white;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    color: $blue-secondary;
+    background: transparent;
+    border: 1px solid $gray-700;
+  }
+}
+
+.blue {
+  background: $white;
+  color: $blue-secondary;
+
+  &__hover {
+    background: transparent;
+    border: 1px solid $white;
+  }
+}

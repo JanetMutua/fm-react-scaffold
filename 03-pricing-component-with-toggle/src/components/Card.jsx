@@ -1,16 +1,19 @@
 import { Button } from "./Button";
-import { Feature } from "./Feature";
 
-export function Card({ cardName, cardPrice, cardFeatures }) {
+export function Card({ cardName, cardPrice, cardFeatures, cardStyling }) {
   return (
     <div className="card">
       <h2 className="card__name">{cardName}</h2>
-      <h3>{cardPrice}</h3>
-      <hr />
+      <h3 className="card__price">{cardPrice}</h3>
+
       {cardFeatures.map((feature) => {
-        return <Feature cardFeature={feature} />;
+        return (
+          <div className={`card__feature card__${cardStyling}`}>
+            <p className="card__feature__item">{feature}</p>
+          </div>
+        );
       })}
-      <Button color="blue" buttonText="Learn more" />
+      <Button color={cardStyling} buttonText="Learn more" />
     </div>
   );
 }
