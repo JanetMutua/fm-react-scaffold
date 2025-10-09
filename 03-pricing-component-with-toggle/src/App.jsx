@@ -1,6 +1,6 @@
 import "./scss/App.scss";
 import { Card } from "./components/Card";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import { pricingData } from "./data";
 
@@ -15,23 +15,17 @@ library.add(fas, fab, far);
 
 function App() {
   // toggle state
-  const [pricingDatas, setPricingData] = useState([]);
-  const [isToggled, setIsToggled] = useState(false);
+  // const [cardData, setCardData] = useState({});
+  const [isToggled, setIsToggled] = useState(true);
 
-  useEffect(() => {
-    fetch("/pricing-data.json")
-      .then((result) => {
-        return result.json();
-      })
-      .then((data) => {
-        setPricingData(data);
-      });
-  }, []);
+  // useEffect(() => {
+  //   setCardData(pricingData);
+  // }, []);
 
   // toggle functionality
   const handleToggle = () => {
+    console.log(isToggled);
     setIsToggled(!isToggled);
-    // console.log(pricingData.annually);
   };
 
   return (
@@ -43,28 +37,37 @@ function App() {
             <span className="pricing__toggle__text">Annually</span>
             <div className="pricing__toggle__icon" onClick={handleToggle}>
               {isToggled ? (
-                <FontAwesomeIcon icon="fa-solid fa-toggle-on" />
-              ) : (
                 <FontAwesomeIcon icon="fa-solid fa-toggle-off" />
+              ) : (
+                <FontAwesomeIcon icon="fa-solid fa-toggle-on" />
               )}
             </div>
             <span className="pricing__toggle__text">Monthly</span>
           </div>
-          {isToggled
-            ? pricingData.annually.map((cardData) => {
-                console.log(cardData.title);
-                <Card cardName={cardData.title} cardPrice={cardData.price} />;
-              })
-            : pricingData.monthly.map((cardDataMonthly) => {
-                <Card
-                  cardName={cardDataMonthly.title}
-                  cardPrice={cardDataMonthly.price}
-                />;
-              })}
 
-          {/* <Card cardName={pricingData[0].title} cardPrice="$19.99" /> */}
-          {/* <Card cardName="Professional" cardPrice="$24.99" />
-          <Card cardName="Master" cardPrice="$39.99" /> */}
+          {isToggled
+            ? pricingData.annually &&
+              pricingData.annually.map((annualData, index) => {
+                return (
+                  <Card
+                    key={`annual-${index}`}
+                    cardName={annualData.title}
+                    cardPrice={annualData.price}
+                    cardFeatures={annualData.features}
+                  />
+                );
+              })
+            : pricingData.monthly &&
+              pricingData.monthly.map((monthlyData, index) => {
+                return (
+                  <Card
+                    key={`monthly-${index}`}
+                    cardName={monthlyData.title}
+                    cardPrice={monthlyData.price}
+                    cardFeatures={monthlyData.features}
+                  />
+                );
+              })}
         </div>
       </main>
     </>
