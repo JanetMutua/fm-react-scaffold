@@ -15,12 +15,7 @@ library.add(fas, fab, far);
 
 function App() {
   // toggle state
-  // const [cardData, setCardData] = useState({});
   const [isToggled, setIsToggled] = useState(true);
-
-  // useEffect(() => {
-  //   setCardData(pricingData);
-  // }, []);
 
   // toggle functionality
   const handleToggle = () => {
@@ -38,11 +33,11 @@ function App() {
             {isToggled ? (
               <FontAwesomeIcon
                 className="toggle"
-                icon="fa-solid fa-toggle-off"
+                icon="fa-solid fa-toggle-on"
               />
             ) : (
               <FontAwesomeIcon
-                className="toggle"
+                className="toggle-rotate"
                 icon="fa-solid fa-toggle-on"
               />
             )}

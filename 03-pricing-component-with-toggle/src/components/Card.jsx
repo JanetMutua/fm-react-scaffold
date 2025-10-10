@@ -4,7 +4,7 @@ export function Card({ cardName, cardPrice, cardFeatures, cardStyling }) {
   return (
     <div className="card">
       <h2 className="card__name">{cardName}</h2>
-      <h3 className="card__price">{cardPrice}</h3>
+      <h3 className="card__price">${cardPrice}</h3>
 
       {cardFeatures.map((feature) => {
         return (
