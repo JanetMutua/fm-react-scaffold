@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/huddle-landing-page-with-single-introductory-section-sba_I7it01)
+- Live Site URL: [Live site URL](https://huddle-landing-page-swart-delta.vercel.app/)
 
 ## My process
 
@@ -47,4 +47,3 @@ Users should be able to:
 
 - Website - [To be added](#)
 - Frontend Mentor - [@JanetMutua](https://www.frontendmentor.io/profile/JanetMutua)
-- Twitter - [@mu_mbua](https://x.com/mu_mbua_)

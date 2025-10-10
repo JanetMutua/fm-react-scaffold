@@ -46,4 +46,3 @@ Users should be able to:
 
 - Website - [To be added](#)
 - Frontend Mentor - [@JanetMutua](https://www.frontendmentor.io/profile/JanetMutua)
-- Twitter - [@mu_mbua](https://x.com/mu_mbua_)
