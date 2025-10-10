@@ -15,3 +15,5 @@ Repository for Frontend Mentor projects built with:
 [01. Huddle landing page](https://huddle-landing-page-swart-delta.vercel.app/)
 
 [02. Results summary card component](https://results-summary-component-tan-eta.vercel.app/)
+
+[03. Pricing component with toggle](https://pricing-component-with-toggle-omega-three.vercel.app/)
