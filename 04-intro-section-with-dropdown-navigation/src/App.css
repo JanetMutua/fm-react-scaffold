@@ -1,0 +1,132 @@
+/* GOOGLE FONTS IMPORT */
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* CSS RESETS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CUSTOM VARIABLES */
+
+:root {
+  /* neutral colors */
+  --gray-50: hsl(0, 0%, 98%);
+  --gray-500: hsl(0, 0%, 41%);
+  --gray-950: hsl(0, 0%, 8%);
+
+  /* font family */
+  --font-fam: "Epilogue";
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font-fam);
+  font-size: 18px;
+}
+
+.landing-page {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid green; */
+}
+
+/* NAVBAR STYLING */
+
+.nav-section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1em 1.5em 0.5em;
+  /* border: 3px solid blue; */
+}
+
+.nav-right {
+  display: flex;
+  gap: 2.5em;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 1em;
+  padding: 0.4em;
+  list-style: none;
+  font-size: 0.8em;
+  color: var(--gray-500);
+  /* border: 2px solid brown; */
+  /* margin-right: 2em; */
+}
+
+/* styling buttons */
+.login-btn,
+.register-btn {
+  margin-right: 1em;
+  background-color: transparent;
+  padding: 0.4em 1.2em;
+  border-radius: 0.5em;
+  font-family: inherit;
+}
+
+.login-btn {
+  border: none;
+}
+
+/* HERO SECTION STYLING */
+.hero-section {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  /* gap: 2em; */
+  padding: 1.5em;
+  width: 88%;
+  /* border: 2px solid red; */
+}
+
+.left-side {
+  width: 50%;
+  /* border: 3px solid gold; */
+  /* margin-top: 2em; */
+  /* padding: 1em 0; */
+}
+
+.cta-header {
+  font-size: 4.5em;
+}
+
+.cta-text {
+  margin-top: 1.5em;
+  font-size: 0.9em;
+}
+
+.cta-btn {
+  margin-top: 1.5em;
+  background-color: var(--gray-950);
+  padding: 0.6em 1.5em;
+  border-radius: 0.5em;
+  color: var(--gray-50);
+  font-family: inherit;
+}
+
+.companies {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 1.5em;
+  gap: 1em;
+  align-items: flex-end;
+}
+
+.hero-img {
+  width: 370px;
+  height: auto;
+}

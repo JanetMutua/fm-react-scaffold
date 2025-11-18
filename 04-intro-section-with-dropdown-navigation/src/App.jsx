@@ -1,13 +1,14 @@
 import "./App.css";
 // import Hero from "./components/hero";
-import { Navigation } from "./components/navigation";
+import { Navigation } from "./components/navigation/navigation";
+import { Hero } from "./components/hero/hero";
 
 function App() {
   return (
     <>
-      <main>
-        {/* navigation section */}
+      <main className="landing-page">
         <Navigation />
+        <Hero />
       </main>
     </>
   );
