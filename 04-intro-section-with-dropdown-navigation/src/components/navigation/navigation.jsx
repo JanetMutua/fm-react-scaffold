@@ -11,12 +11,16 @@ export const Navigation = () => {
           <ul className="links">
             <li className="features">
               <span>Features</span>
-              <img src={arrowDown} alt="arrow down" />
+              {/* insert conditional rendering here */}
+              <img className="arrow" src={arrowDown} alt="arrow down" />
+              <img className="arrow up" src={arrowUp} alt="arrow up" />
             </li>
 
             <li className="company">
               <span>Company</span>
-              <img src={arrowDown} alt="arrow down" />
+              {/* insert conditional rendering or hover functionality here */}
+              <img className="arrow" src={arrowDown} alt="arrow down" />
+              <img className="arrow up" src={arrowUp} alt="arrow up" />
             </li>
 
             <li>Careers</li>
